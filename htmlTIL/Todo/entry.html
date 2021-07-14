@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entry</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <h2>회원 가입 페이지</h2>
+
+        <form>
+            <p>
+            <label for="user_id">아이디&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="user_id" value=""><br>
+            <label for="user_email">이메일&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="user_email" value=""><br>
+            <label for="user_password">비밀번호</label>
+            <input type="text" password="user_password" value=""><br>
+            <label for="user_password">비번확인</label>
+            <input type="text" password="user_password" value=""><br>
+            </p>
+            <!--radiobox-->
+            <p>
+                메일수신동의
+                <input type="radio" id="agree" name="mail_accept_agreement" value="동의">
+                <label for="agree">동의</label>
+                <input type="radio" id="disagree" name="mail_accept_agreement" value="동의하지않음">
+                <label for="disagree">동의하지않음</label><br>
+            </p>
+            <!--checkbox-->    
+            <p>
+                <input type="checkbox" id="interest1" name="interest1" value="AI">
+                <label for="interest1"> AI</label><br>
+                <input type="checkbox" id="interest2" name="interest2" value="IOT">
+                <label for="interest2"> IOT</label><br>
+                <input type="checkbox" id="interest3" name="interest3" value="BigData">
+                <label for="vehicle3"> BigData</label><br>
+                <input type="checkbox" id="interest4" name="interest4" value="Cloud">
+                <label for="vehicle4"> Cloud</label><br>
+            </p>
+            <!--dropbox-->
+            <p>
+            역할
+                <select name="position">
+                <option value="Back_End_Developer">Back-End Developer</option>
+                <option value="Front_End_Developer">Front-End Developer</option>
+                <option value="Full_Stack_Developer">Full-Stack Developer</option>
+                <option value="DevOps_Engineer">DevOps Engineer</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Architech">Architech</option>
+            </p>
+            </select>
+            <p>
+                <input type="submit" value="가입"><input type="submit" value="초기화">
+            </p>
+        </form>
+        
+    </body>
+</html>
