@@ -3,30 +3,33 @@
     <head>
         <title>Schedule</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
 
         <h2>일정관리 페이지</h2>
 
         <form>
-            <p>
-                <!--text field-->
-                <label for="schedule_title">제목</label>
-                <input type="text" id="schedule_title" value=""><br>
-            </p>
-            <p>
-                <textarea name="todo" rows="10" cols="30"> </textarea>
-            </p>
-            <p>
-                <!--schedul date select-->
-                <label for="scheduletime">일정</label>
-                <input type="datetime-local" id="scheduletime" name=scheduletime>
-            
-            </p>
-            <p>
-                <!--submit-->
-                <input type="submit" value="일정등록">
-            </p>
+            <div>
+                <p>
+                    <!--text field-->
+                    <label for="schedule_title">제목</label>
+                    <input type="text" id="schedule_title" value=""><br>
+                </p>
+                <p>
+                    <textarea name="todo" rows="10" cols="30"> </textarea>
+                </p>
+                <p>
+                    <!--schedul date select-->
+                    <label for="scheduletime">일정</label>
+                    <input type="datetime-local" id="scheduletime" name=scheduletime>
+                
+                </p>
+                <p>
+                    <!--submit-->
+                    <a href="" class="button" target="subit">일정등록</a>
+                </p>
+            </div>
         </form>
         
     </body>

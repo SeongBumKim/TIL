@@ -3,17 +3,26 @@
     <head>
         <title>Login</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
 
         <h2>로그인 페이지</h2>
+        
 
         <form>
-            <label for="user_id">아이디</label><br>
-            <input type="text" id="user_id" value=""><br>
-            <label for="user_password">비밀번호</label><br>
-            <input type="text" password="user_password" value=""><br>
-            <input type="submit" value="로그인"><input type="submit" value="회원가입">
+            <div>
+                <p>
+                    <label for="user_id">아이디</label><br>
+                    <input type="text" id="user_id" value=""><br>
+                    <label for="user_password">비밀번호</label><br>
+                    <input type="text" password="user_password" value="">
+                </p>
+                <p>
+                    <a href="todo.html" class="button" target="todo">로그인</a>
+                    <a href="entry.html" class="button" target="entry">회원가입</a>
+                </p>
+            </div>
         </form>
         
     </body>
