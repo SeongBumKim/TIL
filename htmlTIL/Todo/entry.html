@@ -6,20 +6,15 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-
         <h2>회원 가입 페이지</h2>
 
         <form>
             <div>
                 <p>
-                <label for="user_id">아이디&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" id="user_id" value=""><br>
-                <label for="user_email">이메일&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" id="user_email" value=""><br>
-                <label for="user_password">비밀번호</label>
-                <input type="text" password="user_password" value=""><br>
-                <label for="user_password">비번확인</label>
-                <input type="text" password="user_password" value=""><br>
+                    아이디 &nbsp;&nbsp;&nbsp;<input type="text" id="user_id" ><br>
+                    이메일 &nbsp;&nbsp;&nbsp;<input type="text" id="user_email"><br>
+                    비밀번호 <input type="text" id="user_pw"><br>
+                    비번확인 <input type="text" id="check_pw"><br>
                 </p>
                 <!--radiobox-->
                 <p>
@@ -53,11 +48,56 @@
                 </p>
                 </select>
                 <p>
-                    <a href="login.html" class="button" target="login">가입</a>
-                    <a href="entry.html" class="button" target="entry">초기화</a>
+                    <button href="login.html" type="button" id="registration" class="button" onclick="regist()">가입</button>
+                    <!--url 이동이 안됨-->
+                    <button href="entry.html" type="button" id="initalization" class="button" onclick="init()">초기화</button>
                 </p>
             </div>
         </form>
-        
+
+
+        <script>
+            // 사용자마다의 값 저장은 어떻게?
+            class myinfo{
+                constructor(id, email, password){
+                    this.id = id;
+                    this.email = email;
+                    this.password = password;
+                }
+            }
+            function checkNull(){
+                var a = document.getElementById("user_id").value;
+                var b = document.getElementById("user_email").value;
+                var c = document.getElementById("user_pw").value;
+                var d = document.getElementById("check_pw").value;
+
+                if (a.value == "" || b.value == "" || c.value == "" || d.value == ""){
+                    return false
+                }
+                else return true;
+            }
+            function checkPassword(){
+                var x = document.getElementById("user_pw").value;
+                var y = document.getElementById("check_pw").value;
+                if (x.value == y.value){
+                    return check_password = true;
+                }
+                else return check_password = false;
+            }
+            function regist(){
+                var a = document.getElementById("user_id").value;
+                var b = document.getElementById("user_email").value;
+                var c = document.getElementById("user_pw").value;
+                // radibox, checkbox, dropbox 값을 가져와야함 
+                if (checkNull() == false){ // checkNull함수 호출이안됨
+                    alert("text empty");
+                }
+                else alert("Welcom! " + a);
+                return myinfo(a,b,c)               
+            }
+            function init(){
+                alert("test");
+            }
+        </script>        
     </body>
 </html>
