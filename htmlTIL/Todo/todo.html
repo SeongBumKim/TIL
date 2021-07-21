@@ -17,20 +17,28 @@
                     <input type="text" id="schedule_title" value=""><br>
                 </p>
                 <p>
-                    <textarea name="todo" rows="10" cols="30"> </textarea>
+                    <textarea name="todo" rows="10" cols="30" id="schedule_todo"> </textarea>
                 </p>
                 <p>
                     <!--schedul date select-->
                     <label for="scheduletime">일정</label>
-                    <input type="datetime-local" id="scheduletime" name=scheduletime>
+                    <input type="datetime-local" id="schedule_time" name=scheduletime>
                 
                 </p>
                 <p>
                     <!--submit-->
-                    <a href="" class="button" target="subit">일정등록</a>
+                    <button class="button" value="submit" onclick="save()">일정등록</button>
+                    <!-- <a href="" class="button" target="subit">일정등록</a> -->
                 </p>
             </div>
         </form>
+        <script>
+            function save(){
+                var title = document.getElementById("schedule_title").value;
+                var todo = document.getElementById("schedule_todo").value;
+                var time = document.getElementById("schedule_time").value;
+            }
+        </script>
         
     </body>
 </html>

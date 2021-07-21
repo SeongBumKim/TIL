@@ -8,13 +8,13 @@
     <body>
         <h2>회원 가입 페이지</h2>
 
-        <form>
+        <form action = "login.html">
             <div>
                 <p>
                     아이디 &nbsp;&nbsp;&nbsp;<input type="text" id="user_id" ><br>
                     이메일 &nbsp;&nbsp;&nbsp;<input type="text" id="user_email"><br>
                     비밀번호 <input type="text" id="user_pw"><br>
-                    비번확인 <input type="text" id="check_pw"><br>
+                    비번확인 <input type="text" id="check_pw" onblur="checkPassword()"><br>
                 </p>
                 <!--radiobox-->
                 <p>
@@ -48,16 +48,14 @@
                 </p>
                 </select>
                 <p>
-                    <button href="login.html" type="button" id="registration" class="button" onclick="regist()">가입</button>
-                    <!--url 이동이 안됨-->
-                    <button href="entry.html" type="button" id="initalization" class="button" onclick="init()">초기화</button>
+                    <button id="registration" class="button" onclick="regist()">가입</button>
+                    <input class="button" type="reset"></button>
                 </p>
             </div>
         </form>
 
 
         <script>
-            // 사용자마다의 값 저장은 어떻게?
             class myinfo{
                 constructor(id, email, password){
                     this.id = id;
@@ -79,11 +77,9 @@
             function checkPassword(){
                 var x = document.getElementById("user_pw").value;
                 var y = document.getElementById("check_pw").value;
-                if (x.value == y.value){
-                    return check_password = true;
-                }
-                else return check_password = false;
-            }
+                if (x != y){
+                    alert("비밀번호가 일치하지 않습니다");
+                }}
             function regist(){
                 var a = document.getElementById("user_id").value;
                 var b = document.getElementById("user_email").value;
@@ -92,11 +88,7 @@
                 if (checkNull() == false){ // checkNull함수 호출이안됨
                     alert("text empty");
                 }
-                else alert("Welcom! " + a);
-                return myinfo(a,b,c)               
-            }
-            function init(){
-                alert("test");
+                else alert("Welcom! " + a);            
             }
         </script>        
     </body>
