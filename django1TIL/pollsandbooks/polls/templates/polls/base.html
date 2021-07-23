@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title> Django Poll </title>
+    </head>
+    <body>
+        <div id="sidebar">
+            {% block sidebar %}
+                <ul>
+                    <li><a href="/admin/">관리자페이지</a></li>
+                    <li><a href="/polls/">설문페이지</a></li>
+                </ul>
+            {% endblock %}
+        </div>
+        <div id="contents">
+        </div>
+    </body>
+</html>
